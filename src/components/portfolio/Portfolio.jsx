@@ -71,22 +71,25 @@ function Portfolio() {
                     but the majority have suffered alteration.</p>
             </div>
 
-            <div className="slider-container ">
+            <div className=" ">
                 <Slider {...settings}>
 
                     {portfolio.map(item => (
-                        <div key={item.id}>
+                        <div key={item.id} className='px-5 relative'>
 
-                            <div className='relative '  >
+                            <div className=' relative '  >
 
-                               <div className="hover:bgg"> {item.path}</div>
-                                <div className='absolute bottom-5 p-5 left-0 z-0'>
-                                    <p className='text-white px-5 mb-4' >{item.title}</p>
-                                    <h2 className='text-white px-5 mb-4 text-3xl' >{item.heading}</h2>
-
-                                </div>
+                                {item.path}
+                                <div className='hover:bg-red-300 absolute opacity-90 z-10 w-full h-full top-0 left-0 '></div>
+                            </div>
+                            <div className='absolute bottom-5 p-5 left-0 z-20'>
+                                <p className='text-white px-5 mb-4' >{item.title}</p>
+                                <h2 className='text-white px-5 mb-4 text-3xl' >{item.heading}</h2>
 
                             </div>
+
+
+
 
                         </div>
 

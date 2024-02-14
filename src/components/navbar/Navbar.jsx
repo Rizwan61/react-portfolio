@@ -51,11 +51,9 @@ const Navbar = () => {
           <img src={logo} alt="" style={{ width: 250 }} />
         </div>
         <div className=''>
-          {
+        {
             NavItems.map((item) => {
-              <div key={item.id}>
-                return <a href={item.section} className='text-white p-3 px-5 hover:text-red-600 font-bold text-lg inline-block'> {item.title} </a>
-              </div>
+              return <a href={item.section} className='text-white p-3 px-5 hover:text-red-600 font-bold text-lg  inline-block'> {item.title} </a>
             })
           }
         </div>
