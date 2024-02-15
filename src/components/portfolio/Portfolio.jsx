@@ -67,7 +67,7 @@ function Portfolio() {
         <div className='my-10'>
             <div className='my-10 mx-5'>
                 <h1 className='text-6xl font-bold mb-3 '>Our Portfolio</h1>
-                <p className='my-4'>There are many variations of passages of Lorem Ipsum available,
+                <p className='my-4 text-gray-500 '>There are many variations of passages of Lorem Ipsum available,
                     but the majority have suffered alteration.</p>
             </div>
 
