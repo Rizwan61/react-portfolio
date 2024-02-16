@@ -41,23 +41,24 @@ function TeamSkill() {
     ]
     return (
         <>
-            <div className='my-[60px]'>
+            <div className='py-[60px]  dark:bg-black'>
                 <div className='my-10 mx-5'>
-                    <h3 className='text-6xl font-bold mb-3 text-black'>Skilled Team</h3>
-                    <span className='my-4 text-gray-500 	 '>There are many variations of passages of Lorem Ipsum available,
+                    <h3 className='text-6xl font-bold mb-3  dark:text-white text-black'>Skilled Team</h3>
+                    <span className='my-4 text-gray-500  dark:text-gray-500	 '>There are many variations of passages of Lorem Ipsum available,
                         <br />   but the majority have suffered alteration.</span>
                 </div>
-            </div>
-            <div className=" w-100 h-100 grid grid-rows-2 mx-5  grid-flow-col gap-4">
-                {
-                    team.map((item) => {
-                        return (<div key={item.id}>
 
-                            <img className='rounded-xl' src={item.path} alt='image is not found' />
-                        </div>
-                        )
-                    })
-                }
+                <div className=" w-100 h-100 grid grid-rows-2 mx-5  grid-flow-col gap-4">
+                    {
+                        team.map((item) => {
+                            return (<div key={item.id}>
+
+                                <img className='rounded-xl' src={item.path} alt='image is not found' />
+                            </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
         </>
     )

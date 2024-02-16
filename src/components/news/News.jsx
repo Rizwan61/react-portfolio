@@ -40,10 +40,10 @@ function News() {
     ]
     return (
         <>
-            <div className='my-16'>
+            <div className='py-16  dark:bg-black'>
                 <div className='my-16 mx-5'>
-                    <h1 className='text-6xl font-bold mb-3 '>Latest News</h1>
-                    <p className='my-4 text-gray-500 '>There are many variations of passages of Lorem Ipsum available,
+                    <h1 className='text-6xl font-bold mb-3  dark:text-white '>Latest News</h1>
+                    <p className='my-4 text-xl text-gray-500  dark:text-gray-500   '>There are many variations of passages of Lorem Ipsum available,
                       <br />  but the majority have suffered alteration.</p>
                 </div>
 

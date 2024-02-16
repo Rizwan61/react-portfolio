@@ -54,21 +54,22 @@ export default function CustomerService() {
     ]
     return (
         <>
-            <div className='my-[80px]  text-center'>
+            <div className='py-[80px]  text-center dark:bg-[#191919]'>
                 <div className='my-10 w-[75%] mx-auto'>
-                    <p className='text-4xl  font-normal'>Phenomenal Customer Service! I'm just starting out with the team helped me so much with integrating this into my website. Highly recommend.</p>
+                    <p className='text-4xl  font-normal  dark:text-white	'>Phenomenal Customer Service! I'm just starting out with the team helped me so much with integrating this into my website. Highly recommend.</p>
                 </div>
-            </div>
-            <div className=" w-[500px]   grid grid-rows-2 mx-auto grid-cols-5 place-content-center	  gap-4">
-                {
-                    team.map((item) => {
-                        return (<div key={item.id}>
 
-                            <img className='rounded-2xl ' src={item.path} alt='image is not found' />
-                        </div>
-                        )
-                    })
-                }
+                <div className=" w-[500px]   grid grid-rows-2 mx-auto grid-cols-5 place-content-center	  gap-4">
+                    {
+                        team.map((item) => {
+                            return (<div key={item.id}>
+
+                                <img className='rounded-2xl ' src={item.path} alt='image is not found' />
+                            </div>
+                            )
+                        })
+                    }
+                </div>
             </div>
         </>
     )

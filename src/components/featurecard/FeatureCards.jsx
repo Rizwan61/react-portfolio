@@ -50,11 +50,11 @@ const FeatureCard = () => {
 
     return (
 
-        <div className=' grid  grid-cols-3 w-100  shadow-lg rounded-lg overflow-hidden'>
+        <div className=' grid  grid-cols-12    shadow-lg  overflow-hidden dark:bg-[#191919]   hover:text-white  hover:cursor-pointer bg-gray-100'>
             {
                 cards.map(item => {
                     return <div key={item.id}>
-                        <div class="px-6 py-4  bg-gray-300 mx-3 my-10 bgg rounded-xl">
+                        <div class="bg-gray-300 dark:bg-black dark:text-white  bgg rounded-xl">
                             <div class="font-bold  px-4 pt-10 pb-3 text-7xl">{item.icon}</div>
                             <div class="font-bold text-2xl  px-4  py-3">{item.heading}</div>
                             <p class=" text-base px-4  pt-3 pb-8 ">{item.content}</p>

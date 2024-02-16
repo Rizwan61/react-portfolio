@@ -64,11 +64,11 @@ function Portfolio() {
 
 
     return (
-        <div className='my-10'>
+        <div className='py-10 dark:bg-black  '>
             <div className='my-10 mx-5'>
-                <h1 className='text-6xl font-bold mb-3 '>Our Portfolio</h1>
-                <p className='my-4 text-gray-500 '>There are many variations of passages of Lorem Ipsum available,
-                    but the majority have suffered alteration.</p>
+                <h1 className='text-6xl font-bold mb-3 dark:text-white '>Our Portfolio</h1>
+                <p className='my-4 text-xl   dark:text-gray-500 '>There are many variations of passages of Lorem Ipsum available,
+                   <br /> but the majority have suffered alteration.</p>
             </div>
 
             <div className=" ">

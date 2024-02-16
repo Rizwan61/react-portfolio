@@ -23,10 +23,10 @@ function Fact() {
     }
   ]
   return (
-    <div className='my-[60px]'>
+    <div className='py-[60px] dark:bg-[#191919] '>
       <div className='text-center '>
         <h3 className='my-5 text-2xl font-medium	text-rose-600'>Our Fun Facts</h3>
-        <h2 className='text-4xl text-center font-semibold	 '>Completed 1200+ Projects <br />
+        <h2 className='text-4xl text-center font-semibold dark:text-white	 '>Completed 1200+ Projects <br />
           Successfully.</h2>
       </div>
       <div className=' grid  grid-cols-3    rounded-lg '>
@@ -48,7 +48,7 @@ function Fact() {
                   
                   
                  +</div>
-                <p class=" text-base px-4  ">{item.content}</p>
+                <p class=" text-xl   dark:text-gray-500  ">{item.content}</p>
               </div>
 
 

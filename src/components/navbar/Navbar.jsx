@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
+import { BsSunFill } from "react-icons/bs";
+import { IoMoonOutline } from "react-icons/io5";
+import { Button, Drawer } from 'antd';
+import { RxHamburgerMenu } from "react-icons/rx";
 import logo from '../../assets/images/logo.png'
 
+
+
 const Navbar = () => {
+  const [isDarkTheme, setIsDarkTheme] = useState(null);
+  const [open, setOpen] = useState(false);
+
   const NavItems = [
     {
       id: 1,
@@ -44,24 +53,70 @@ const Navbar = () => {
       section: "#clients"
     },
   ]
+
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
+
+  useEffect(() => {
+    let isDark = localStorage.getItem("isDark");
+    if (isDark == 'true') {
+      document.documentElement.classList.add('dark');
+      setIsDarkTheme("true");
+    }
+  }, [])
+
+
+  const toggleDarkMode = () => {
+    let isDark = localStorage.getItem("isDark");
+    if (isDark == null || isDark == 'false') {
+      localStorage.setItem('isDark', true);
+      document.documentElement.classList.add('dark');
+      setIsDarkTheme("true");
+    } else {
+      localStorage.setItem('isDark', false);
+      document.documentElement.classList.remove('dark');
+      setIsDarkTheme(null);
+    }
+  };
+
   return (
     <>
-      <div className=''>
-        <div className='text-white'>
-          <img src={logo} alt="" style={{ width: 250 }} />
-        </div>
-        <div className=''>
-        {
+      <Button type="primary" onClick={showDrawer} className='text-2xl mt-2 md:hidden'>
+        <RxHamburgerMenu />
+      </Button>
+      <div className='flex justify-between items-center'>
+      <div className='text-white'>
+                <img src={logo} alt="" style={{ width: 250 }} />
+            </div>
+        <div className='hidden md:block'>
+          {
             NavItems.map((item) => {
               return <a href={item.section} className='text-white p-3 px-5 hover:text-red-600 font-bold text-lg  inline-block'> {item.title} </a>
             })
           }
         </div>
-        <button className=''>LET'S TALK</button>
 
       </div>
+      <button
+        onClick={toggleDarkMode}
+        className="px-4 py-2 ms-5 w-12 h-12 bg-white rounded-2xl dark:bg-[#191919] dark:text-white text-black fixed bottom-5 z-90"
+      >
+        {(isDarkTheme == "false" || isDarkTheme == null) ? <IoMoonOutline /> : <BsSunFill />}
+      </button>
 
-
+      <Drawer title="trydo" onClose={onClose} open={open} placement='right' >
+        <div className=''>
+          {
+            NavItems.map((item) => {
+              return <a href={item.section} className='text-black dark:text-black p-3 px-5 hover:text-red-600 font-bold text-lg block'> {item.title} </a>
+            })
+          }
+        </div>
+      </Drawer>
     </>
   )
 }

@@ -8,6 +8,8 @@ import Fact from './components/facts/Fact'
 import TeamSkill from './components/teamskill/TeamSkill'
 import CustomerService from './components/customerservice/CustomerService'
 import News from './components/news/News'
+import Clients from './components/client/Clients'
+import Footer from './components/footer/Footer'
 
 function App() {
   
@@ -21,7 +23,7 @@ function App() {
         </div>
       </section>
 
-      <section id='features'>
+       <section id='features'>
         <div className='container mx-auto max-w-[1340px]'>
          <FeatureCard />
         </div>
@@ -51,6 +53,16 @@ function App() {
         <News />
         </div>
       </section>
+      <section id='Clients'>
+        <div className='container mx-auto max-w-[1340px]'>
+        <Clients />
+        </div>
+      </section>
+      <section id=''>
+        <div className='container mx-auto max-w-[1340px]'>
+        <Footer />
+        </div>
+      </section> 
 
     </>
   )
