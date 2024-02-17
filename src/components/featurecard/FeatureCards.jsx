@@ -50,7 +50,7 @@ const FeatureCard = () => {
 
     return (
 
-        <div className=' grid  grid-cols-12    shadow-lg  overflow-hidden dark:bg-[#191919]   hover:text-white  hover:cursor-pointer bg-gray-100'>
+        <div className=' grid  gap-4 m-3 sm:grid-cols-2 lg:grid-cols-3   shadow-lg  overflow-hidden dark:bg-[#191919]   hover:text-white  hover:cursor-pointer bg-gray-100'>
             {
                 cards.map(item => {
                     return <div key={item.id}>

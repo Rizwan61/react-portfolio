@@ -29,7 +29,7 @@ function Fact() {
         <h2 className='text-4xl text-center font-semibold dark:text-white	 '>Completed 1200+ Projects <br />
           Successfully.</h2>
       </div>
-      <div className=' grid  grid-cols-3    rounded-lg '>
+      <div className=' grid  sm:grid-cols-2 lg:grid-cols-3    rounded-lg '>
 
         {
           fact.map((item) => {

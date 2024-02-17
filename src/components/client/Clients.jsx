@@ -59,12 +59,12 @@ export default function Clients() {
     ]
     return (
         <>
-            <div className="   py-10 dark:bg-[#191919] flex flex-wrap	  gap-[100px] items-end justify-center">
+            <div className="  grid grid-cols-4 gap-5 mx -5 p-10 md:grid-cols-6 dark:bg-[#191919]  ">
                 {
                     clients.map((item) => {
                         return (<div key={item.id}>
 
-                            <img className='w-24 contrast-50 :hover:text-white	' src={item.path} alt='image is not found' />
+                            <img className='w-24 contrast-50    :hover:text-white 	' src={item.path} alt='image is not found' />
                         </div>
                         )
                     })

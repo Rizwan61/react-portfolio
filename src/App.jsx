@@ -28,7 +28,7 @@ function App() {
          <FeatureCard />
         </div>
       </section>
-      <section id='portfolio'>
+       <section id='portfolio'>
         <div className='container mx-auto max-w-[1340px]'>
          <Portfolio />
         </div>
@@ -48,7 +48,7 @@ function App() {
        <CustomerService/>
         </div>
       </section>
-      <section id='News'>
+    <section id='News'>
         <div className='container mx-auto max-w-[1340px]'>
         <News />
         </div>
@@ -58,7 +58,7 @@ function App() {
         <Clients />
         </div>
       </section>
-      <section id=''>
+       <section id=''>
         <div className='container mx-auto max-w-[1340px]'>
         <Footer />
         </div>

@@ -48,7 +48,7 @@ function TeamSkill() {
                         <br />   but the majority have suffered alteration.</span>
                 </div>
 
-                <div className=" w-100 h-100 grid grid-rows-2 mx-5  grid-flow-col gap-4">
+                <div className=" w-100 h-100 grid  grid-rows-2 mx-5  sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {
                         team.map((item) => {
                             return (<div key={item.id}>
